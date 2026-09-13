@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Tableau Dashboard</title>
+    <style>
+        /* Remove default margins and hide scrollbars to ensure true full screen */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; 
+            background-color: #f9f9f9;
+        }
+        /* Make the Tableau component stretch to fill the entire window */
+        tableau-viz {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <!-- Load the official Tableau Embedding API v3 Javascript library -->
+    <script type="module" src="https://tableau.com"></script>
+</head>
+<body>
+
+    <!-- Replace the src URL below with your own Tableau Public dashboard URL -->
+    <tableau-viz id="tableauViz" 
+        src="https://public.tableau.com/app/profile/natrivera/viz/AMPTimeAttackRuns_17893379178850/MyFastest"
+        toolbar="bottom">
+    </tableau-viz>
+
+</body>
+</html>
